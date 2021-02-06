@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="header">
+    <img src="img/logo.ico" alt="">
+    <span>一只小pig</span>
+  </div>
+
+  <div id="menu">
+    <dl>
+      <dt>学生管理</dt>
+      <dd class="active" data-id="list">学生列表</dd>
+      <dd data-id="cont">新增学生</dd>
+    </dl>
+  </div>
+
+   <div id="content">
+     <div  class="onepage toggle togglehide" id ="list">
+     <table>
+       <thead>
+         <tr>
+           <th>学号</th>
+           <th>姓名</th>
+           <th>性别</th>
+           <th>邮箱</th>
+           <th>年龄</th>
+           <th>手机号</th>
+           <th>住址</th>
+           <th>操作</th>
+         </tr>
+       </thead>
+       <tbody class="tbody">
+        <tr>
+          <td>001</td>
+          <td>高永飞</td>
+          <td>女</td>
+          <td>110@qq.com</td>
+          <td>88</td>
+          <td>120</td>
+          <td>成都</td>
+          <td>
+            <button class="btn one">编辑</button>
+            <button class="btn two">删除</button>
+          </td>
+        </tr>
+       </tbody>
+     </table>
+     <div class="modal">
+       <div class="modal-content">
+         <h3>编辑信息</h3>
+         <form id="modal-studentAdd">
+        <div>
+          <label for = "modal-name">姓名</label><input type ="text" id="modal-name" name="name">
+        </div>
+        <div> 
+          <label>性别</label>
+          <input type="radio" name="sex" checked = "checked" id="modal-man" value="0">
+          <label for="modal-man"  class="not">男</label>
+          <input type="radio" name = "sex"  id="modal-woman" value="1">
+          <label for="modal-woman" class="not">女</label>
+        </div>
+        <div>  
+          <label for = "modal-email">邮箱</label><input type ="text" id="modal-email" name="email">
+        </div>
+        <div>
+          <label for = "modal-id">学号</label><input type ="text" id="modal-id" name="sNo" readonly>
+        </div>
+        <div>
+          <label for = "moadl-birth">出生年</label><input type ="text" id="moadl-birth" name="birth">
+        </div>
+        <div>
+          <label for = "modal-phone">手机号</label><input type ="text" id="modal-phone" name="phone">
+        </div>
+        <div>
+          <label for = "modal-adress">住址</label><input type ="text" id="modal-adress" name="address">
+        </div>
+        <div>
+          <label for=""></label>
+          <input type="submit" id="modal-sub" class = "btn" name=""  value="提交">
+        </div>
+        </form>
+       </div>
+     </div>
+     </div>
+
+     <div class="twopage toggle" id ="cont">
+      <form id="studentAdd">
+        <div>
+          <label for = "name">姓名</label><input type ="text" id="name" name="name">
+        </div>
+        <div> 
+          <label>性别</label>
+          <input type="radio" name="sex" checked = "checked" id="man" value="0">
+          <label for="man"  class="not">男</label>
+          <input type="radio" name = "sex"  id="woman" value="1">
+          <label for="woman" class="not">女</label>
+        </div>
+        <div>  
+          <label for = "email">邮箱</label><input type ="text" id="email" name="email">
+        </div>
+        <div>
+          <label for = "id">学号</label><input type ="text" id="id" name="sNo">
+        </div>
+        <div>
+          <label for = "birday">出生年</label><input type ="text" id="birday" name="birth">
+        </div>
+        <div>
+          <label for = "iphone">手机号</label><input type ="text" id="iphone" name="phone">
+        </div>
+        <div>
+          <label for = "address">住址</label><input type ="text" id="address" name="address">
+        </div>
+        <div>
+          <label for=""></label>
+          <input type="submit" id="sub" class = "btn" name=""  value="提交">
+          <input type="reset"  class = "btn" name="" value="重置">
+        </div>
+      </form>
+     </div>
+   </div>
+   <script src="index.js"></script>
+</body>
+</html>
